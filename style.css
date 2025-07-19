@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  float: left;
+  width: 3.5%;
+  height: auto;
+  margin: 0%;
+}
+
+nav {
+  color: #fff;
+  padding: 0.3% 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(239, 7, 7, 0.697);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+nav li a:hover {
+  color: #f0c040;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bolder;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.opening {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 0rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background-color: #fff;
+  height: 90vh;
+}
+
+.text {
+  flex: 1;
+  min-width: 20vw;
+  font-size: 1rem;
+}
+
+.image {
+  flex: 1;
+  min-width: 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 0% 100% 8% 92% / 10% 47% 53% 90%;
+  background: url('bg.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+h1, h3 {
+  text-align: center;
+  color: #f0c040;
+  text-shadow: 1px 1px 2px #00000085;
+  font-size: 200%;
+  margin: 10px 0;
+}
+
+.explore {
+  position: relative;
+  margin-top: 0.5rem;
+  z-index: 2;
+  background: #0000000f;
+  border-radius: 50px;
+  box-shadow: 20px -20px 60px #bebebe, -20px 20px 40px #ffffff;
+  height: 50%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  text-align: center;
+  min-width: 60vw;
+}
+
+table {
+  border-collapse: collapse;
+  border: #19171700;
+  width: 90%;
+  text-align: left;
+  height: 20em;
+}
+
+th, td {
+  text-align: left;
+  border-bottom: 1px solid #dddddd00;
+}
+
+th {
+  background: #f4f4f4bb;
+}
+
+td a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: 1px 20px;
+  transition: background-color 0.3s;
+  font-size: 1.5rem;
+}
+
+td a:hover {
+  background-color: #0000000a;
+}
+
+.contact {
+  text-align: center;
+  margin: 20px auto;
+  width: 50%;
+  padding: 20px;
+}
+
+.contact h3 {
+  color: #f0c040;
+  text-shadow: 1px 1px 2px #00000085;
+}
+
+.contact a {
+  color: #f0c040;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #33333356;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #333;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  nav ul {
+    width: 80%;
+  }
+
+  .main, .explore, .contact {
+    width: 70%;
+  }
+
+  td a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    padding: 1%;
+    gap: 1%;
+  }
+
+  .logo {
+    width: 15%;
+    margin-bottom: 2%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10%;
+  }
+
+  nav ul li {
+    flex: unset;
+    text-align: center;
+    font-size: 1.3em;
+  }
+
+  .main, .explore, .contact {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  h1, h3 {
+    font-size: 1.5rem;
+  }
+
+  td a {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .opening {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .image {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul li {
+    font-size: 1.1em;
+  }
+
+  .explore {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .contact {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  td a {
+    font-size: 0.9rem;
+  }
+}
